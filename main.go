@@ -37,6 +37,9 @@ func main() {
 	mux.HandleFunc("/api/test", handlers.TestHandler)
 	mux.HandleFunc("/api/test/submit", handlers.SubmitHandler)
 	mux.HandleFunc("/api/test/results", handlers.ResultsHandler)
+	mux.HandleFunc("/api/stroop", handlers.StroopHandler)
+	mux.HandleFunc("/api/math", handlers.ArithmeticHandler)
+	mux.HandleFunc("/api/pool", handlers.PoolHandler)
 
 	// Wrappa il mux con il middleware CORS
 	handlerWithCORS := corsMiddleware(mux)
