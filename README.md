@@ -10,6 +10,8 @@ This repository contains a simple Go backend exposing APIs for running various c
 - `/api/test/results` – list of submissions received
 - `/api/stroop` – Stroop word/color test
 - `/api/math` – simple arithmetic questions
+- `/api/sequence` – numeric series reasoning task
+- `/api/iq` – approximate IQ estimation from test scores
 - `/api/pool` – generate a randomized pool of tests for a session
 
 All endpoints return JSON data and support CORS for local development.
