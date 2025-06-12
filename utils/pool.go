@@ -12,6 +12,7 @@ const (
 	TestMemory     = "memory"
 	TestStroop     = "stroop"
 	TestArithmetic = "arithmetic"
+	TestSequence   = "sequence"
 )
 
 // PoolItem represents a single test to run with its type and count
@@ -35,6 +36,9 @@ func GeneratePool(level int) []PoolItem {
 	}
 	if level > 2 {
 		base = append(base, PoolItem{Type: TestStroop, Count: 5})
+	}
+	if level > 3 {
+		base = append(base, PoolItem{Type: TestSequence, Count: 5})
 	}
 
 	r.Shuffle(len(base), func(i, j int) { base[i], base[j] = base[j], base[i] })
